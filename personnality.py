@@ -3,11 +3,8 @@
 
 """
 Bot Vikidia – Catégorisation par genre via SPARQL direct
-- Aucun interwiki / Wikipédia utilisé
 - QID Wikidata récupéré directement via SPARQL en recherchant le label
 - Ajoute uniquement la catégorie Vikidia correspondante
-- Dry-run activé par défaut
-- Rate-limit: 1 page / seconde
 """
 
 import pywikibot
@@ -15,7 +12,6 @@ from pywikibot import pagegenerators
 import requests
 import time
 
-# ======== CONFIG ========
 VIKIDIA = pywikibot.Site("fr", "vikidia")
 
 CAT_SOURCE = "Catégorie:Personnalité par ordre alphabétique"
@@ -34,10 +30,7 @@ HEADERS = {
     "User-Agent": "BotCelian/VikidiaBot"
 }
 
-# ======== FONCTIONS ========
-
 def sparql_query(query):
-    """Envoie une requête SPARQL et retourne le JSON"""
     try:
         r = requests.get(SPARQL_ENDPOINT, params={"query": query, "format": "json"}, headers=HEADERS, timeout=30)
         r.raise_for_status()
@@ -47,7 +40,6 @@ def sparql_query(query):
         return []
 
 def get_qid_from_label(label):
-    """Récupère le QID Wikidata pour un label FR exact, P31=humain"""
     query = f"""
     SELECT ?item WHERE {{
       ?item rdfs:label "{label}"@fr ;
@@ -61,7 +53,6 @@ def get_qid_from_label(label):
     return results[0]["item"]["value"].split("/")[-1]
 
 def get_gender_via_qid(qid):
-    """Retourne 'male', 'female' ou None via QID"""
     query = f"""
     SELECT ?gender WHERE {{
       wd:{qid} wdt:P21 ?gender .
@@ -121,7 +112,6 @@ def process_page(page, dry_run=True):
     # Rate-limit: 1 page / seconde
     time.sleep(0.5)
 
-# ======== BOUCLE PRINCIPALE ========
 def main(dry_run=True):
     category = pywikibot.Category(VIKIDIA, CAT_SOURCE)
     generator = pagegenerators.CategorizedPageGenerator(category)
@@ -138,3 +128,4 @@ def main(dry_run=True):
 
 if __name__ == "__main__":
     main(dry_run=False)  # dry_run=True → n’écrit rien, juste diagnostic
+
