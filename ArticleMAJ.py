@@ -4,7 +4,7 @@
 import pywikibot
 import re
 
-PAGE_TITLE = "Utilisateur:BotCélian/Brouillon3"
+PAGE_TITLE = "Vikidia:Articles importants et courts"
 MAX_SIZE = 1400  # taille limite
 
 def main():
@@ -67,3 +67,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
