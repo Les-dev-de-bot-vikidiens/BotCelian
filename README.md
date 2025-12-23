@@ -22,7 +22,7 @@ Les scripts de BotCélian :
 
 ### Informations utiles
 > [!IMPORTANT]
-> Un panel de gestion pour BotCélian est en cours de dévellopement
+> BotCélian est uniquement codé en ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 > [!WARNING]
 > Ces scripts sont dévellopés pour Vikidia, il se peut qu'ils ne marchent pas car ils sont mis à jour uniquement par un dévellopeur.
