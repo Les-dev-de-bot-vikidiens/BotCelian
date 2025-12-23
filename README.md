@@ -34,4 +34,4 @@ Les scripts de BotCélian :
 [Page utilisateur sur Vikidia](https://fr.vikidia.org/wiki/Utilisateur:BotCélian)
 
 > [!TIP]
-> Si vous voulez en savoir plus, rejoignez le serveur des "Robots de Vikidia" sur Discord : [invitation Discord](https://discord.gg/fHVu6eFwcX)
+> Si vous voulez en savoir plus, rejoignez le serveur des "Robots de Vikidia" sur Discord : [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/fHVu6eFwcX)
