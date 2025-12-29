@@ -8,7 +8,7 @@
 </div>
 
 > [!NOTE]
-> BotCélian est un bot dévellopé pour les wikis Mediawiki avec Piwikibot, il fonctionne uniquement sur Vikidia en français pour le moment.
+> BotCélian est un bot dévelopé pour les wikis Mediawiki avec Piwikibot, il fonctionne uniquement sur Vikidia en français pour le moment.
 
 ### Scripts
 Les scripts de BotCélian :
