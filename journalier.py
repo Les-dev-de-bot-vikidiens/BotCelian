@@ -1,8 +1,7 @@
-# Les  DISCORD_WEBHOOK_STATS, BOT_NAME sont défnis dans un fichier config.py
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# Script généré par IA
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -10,12 +9,8 @@ from zoneinfo import ZoneInfo
 import requests
 from collections import Counter
 
-# ================= ENV CRON (spécifique à la config pour BotCélian) =================
-os.environ["HOME"] = "/home/celian"
-os.environ["PYWIKIBOT_DIR"] = "/home/celian/pywikibot"
-
-sys.path.append("/home/celian/pywikibot")
-os.chdir("/home/celian/pywikibot")
+# ================= ENV CRON SAFE =================
+os.environ["PYWIKIBOT_DIR"] = "/app"
 
 # ================= PYWIKIBOT =================
 import pywikibot
